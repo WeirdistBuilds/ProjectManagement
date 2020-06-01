@@ -1,6 +1,6 @@
 //Maya ASCII 2018ff09 scene
 //Name: Workbench.ma
-//Last modified: Sun, May 31, 2020 11:20:54 PM
+//Last modified: Sun, May 31, 2020 11:29:41 PM
 //Codeset: 1252
 requires maya "2018ff09";
 requires "mtoa" "3.1.2.1";
@@ -14,8 +14,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "4ABD18DD-4C4F-4E2D-92FA-31A06A513E88";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -47.430679707387007 0.61428243195085841 14.468483231586205 ;
-	setAttr ".r" -type "double3" -4.538352729598417 655.79999999983136 -9.1346720342070593e-16 ;
+	setAttr ".t" -type "double3" -34.425705831505446 15.753858629930029 26.99006604198928 ;
+	setAttr ".r" -type "double3" -20.738352729578128 674.99999999980321 2.2489917832051947e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "DD6EA67D-418A-C5EE-BB6A-AB8FDF33725F";
 	setAttr -k off ".v" no;
