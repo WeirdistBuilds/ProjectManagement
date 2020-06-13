@@ -1,6 +1,6 @@
 //Maya ASCII 2018ff09 scene
 //Name: Pipe.ma
-//Last modified: Fri, Jun 12, 2020 11:42:16 PM
+//Last modified: Fri, Jun 12, 2020 11:44:25 PM
 //Codeset: 1252
 requires maya "2018ff09";
 requires "mtoa" "3.1.2.1";
@@ -14,13 +14,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "99A0B17D-4C1B-765E-07C5-A7B4AB5D47F4";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -14.135753235150844 23.082620415155297 -1.1724452821028102 ;
-	setAttr ".r" -type "double3" 662.06164725668884 265.7999999999592 -2.5444437451708134e-14 ;
+	setAttr ".t" -type "double3" -32.226551244965144 20.088079226018198 2.1571218369624923 ;
+	setAttr ".r" -type "double3" 685.4616472573033 273.4000000000417 0 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "17ADB07E-4D53-341A-CEF6-B3A7710231AD";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 32.060106045872459;
+	setAttr ".coi" 42.641051777063169;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -78,6 +78,7 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -n "PipeConnector";
 	rename -uid "87B342DB-488F-EBE9-0F87-B585494C224A";
+	setAttr ".t" -type "double3" 8.9406967163085938e-08 8.9406967163085938e-08 -9.730825071685981 ;
 	setAttr ".rp" -type "double3" -8.9406967163085938e-08 -8.9406967163085938e-08 9.730825071685981 ;
 	setAttr ".sp" -type "double3" -8.9406967163085938e-08 -8.9406967163085938e-08 9.730825071685981 ;
 createNode mesh -n "PipeConnectorShape" -p "PipeConnector";
@@ -526,8 +527,9 @@ createNode mesh -n "polySurfaceShape1" -p "PipeConnector";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "PipeCurve";
 	rename -uid "45BADBF0-4113-BEAA-8F12-F6B1F5BBA566";
-	setAttr ".rp" -type "double3" 0.72033864259719849 0 -10.624168157716444 ;
-	setAttr ".sp" -type "double3" 0.72033864259719849 0 -10.624168157716444 ;
+	setAttr ".t" -type "double3" 0 0 9.3440501691300177 ;
+	setAttr ".rp" -type "double3" 0 0 -9.3440501691300177 ;
+	setAttr ".sp" -type "double3" 0 0 -9.3440501691300177 ;
 createNode mesh -n "PipeCurveShape" -p "PipeCurve";
 	rename -uid "5986C88B-4A93-8EDF-5015-488800439332";
 	setAttr -k off ".v";
@@ -1025,17 +1027,34 @@ createNode mesh -n "polySurfaceShape2" -p "PipeCurve";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "Pipe";
 	rename -uid "72FC28F1-4EAC-BAA2-EEF4-A3BF27565C6F";
+	setAttr ".t" -type "double3" 0 0 8 ;
+	setAttr ".rp" -type "double3" 0 0 -8 ;
+	setAttr ".sp" -type "double3" 0 0 -8 ;
 createNode mesh -n "PipeShape" -p "Pipe";
 	rename -uid "DA561801-4C67-0288-6C80-409AC72474A9";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.49999986588954926 0.50046990811824799 ;
+	setAttr ".pv" -type "double2" 0.68946397304534912 0.67240962386131287 ;
 	setAttr ".uvst[0].uvsn" -type "string" "map1";
 	setAttr ".cuvs" -type "string" "map1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
+	setAttr -s 42 ".pt[0:41]" -type "float3"  0 0 1.0436335 0 0 1.0436335 
+		0 0 1.0436335 0 0 1.0436335 0 0 1.0436335 0 0 1.0436335 0 0 1.0436335 0 0 1.0436335 
+		0 0 1.0436335 0 0 1.0436335 0 0 1.0436335 0 0 1.0436335 0 0 1.0436335 0 0 1.0436335 
+		0 0 1.0436335 0 0 1.0436335 0 0 1.0436335 0 0 1.0436335 0 0 1.0436335 0 0 1.0436335 
+		-8.9406967e-08 8.9406967e-08 -1.0436335 -8.9406967e-08 8.9406967e-08 -1.0436335 -8.9406967e-08 
+		8.9406967e-08 -1.0436335 -8.9406967e-08 8.9406967e-08 -1.0436335 -8.9406967e-08 8.9406967e-08 
+		-1.0436335 -8.9406967e-08 8.9406967e-08 -1.0436335 -8.9406967e-08 8.9406967e-08 -1.0436335 
+		-8.9406967e-08 8.9406967e-08 -1.0436335 -8.9406967e-08 8.9406967e-08 -1.0436335 -8.9406967e-08 
+		8.9406967e-08 -1.0436335 -8.9406967e-08 8.9406967e-08 -1.0436335 -8.9406967e-08 8.9406967e-08 
+		-1.0436335 -8.9406967e-08 8.9406967e-08 -1.0436335 -8.9406967e-08 8.9406967e-08 -1.0436335 
+		-8.9406967e-08 8.9406967e-08 -1.0436335 -8.9406967e-08 8.9406967e-08 -1.0436335 -8.9406967e-08 
+		8.9406967e-08 -1.0436335 -8.9406967e-08 8.9406967e-08 -1.0436335 -8.9406967e-08 8.9406967e-08 
+		-1.0436335 -8.9406967e-08 8.9406967e-08 -1.0436335 0 0 1.0436335 -8.9406967e-08 8.9406967e-08 
+		-1.0436335;
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode mesh -n "polySurfaceShape3" -p "Pipe";
 	rename -uid "ADBD2971-4C2F-9163-7EF8-9A9CFFFFB875";
