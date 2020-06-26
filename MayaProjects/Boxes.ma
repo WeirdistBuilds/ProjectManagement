@@ -1,6 +1,6 @@
 //Maya ASCII 2018ff09 scene
 //Name: Boxes.ma
-//Last modified: Fri, Jun 26, 2020 02:42:53 AM
+//Last modified: Fri, Jun 26, 2020 02:45:00 AM
 //Codeset: 1252
 requires maya "2018ff09";
 requires "mtoa" "3.1.2.1";
@@ -14,13 +14,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "EBA19569-458A-9935-01F8-93A3001DCA7F";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -64.209629266148838 18.104078393669159 0.31036481108987884 ;
-	setAttr ".r" -type "double3" -14.138352729450546 -807.79999999979452 0 ;
+	setAttr ".t" -type "double3" -17.91735458484461 -43.549570290644688 2.2551322281112984 ;
+	setAttr ".r" -type "double3" 69.261647270613636 -795.39999999974043 1.2617775931101651e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "C5A687FC-44DC-95A5-F251-2B91B822D8DF";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 65.076052134340742;
+	setAttr ".coi" 48.928087969818293;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -78,6 +78,7 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -n "Box1";
 	rename -uid "CE3C1EDE-4EB0-2755-08CC-47BAB1E5DCA1";
+	setAttr ".t" -type "double3" 0 -1.7763568394002505e-15 0 ;
 	setAttr ".rp" -type "double3" 0 1.7763568394002505e-15 0 ;
 	setAttr ".sp" -type "double3" 0 1.7763568394002505e-15 0 ;
 createNode mesh -n "BoxShape1" -p "Box1";
@@ -279,6 +280,7 @@ createNode mesh -n "polySurfaceShape1" -p "Box1";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "Box2";
 	rename -uid "5F1883A3-41C4-D70E-F1A6-6BA348D89231";
+	setAttr ".t" -type "double3" 0 -1.3322676295501878e-15 0 ;
 	setAttr ".rp" -type "double3" 0 1.3322676295501878e-15 0 ;
 	setAttr ".sp" -type "double3" 0 1.7763568394002505e-15 0 ;
 createNode mesh -n "BoxShape2" -p "Box2";
@@ -549,8 +551,9 @@ createNode mesh -n "polySurfaceShape2" -p "Box2";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "Box3";
 	rename -uid "D3B1A563-4A3D-C543-C97B-0386222ACD32";
-	setAttr ".rp" -type "double3" 0 1.9993524762685415 0 ;
-	setAttr ".sp" -type "double3" 0 1.9993524762685415 0 ;
+	setAttr ".t" -type "double3" 0 -2.1129381355677879e-08 0 ;
+	setAttr ".rp" -type "double3" 0 2.1129381355677879e-08 0 ;
+	setAttr ".sp" -type "double3" 0 2.1129381355677879e-08 0 ;
 createNode mesh -n "Box3Shape" -p "Box3";
 	rename -uid "0687DC82-45DF-F052-F885-C9A96D608C0C";
 	setAttr -k off ".v";
