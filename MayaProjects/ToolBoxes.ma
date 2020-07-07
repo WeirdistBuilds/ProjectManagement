@@ -1,6 +1,6 @@
 //Maya ASCII 2018ff09 scene
 //Name: ToolBoxes.ma
-//Last modified: Tue, Jul 07, 2020 12:01:47 AM
+//Last modified: Tue, Jul 07, 2020 12:03:34 AM
 //Codeset: 1252
 requires maya "2018ff09";
 requires "mtoa" "3.1.2.1";
@@ -14,13 +14,13 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "8A727BFF-4B22-7832-A97E-08A2EA51372D";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 20.341108933069616 2.5460904447692183 1.5679957866765437 ;
-	setAttr ".r" -type "double3" -1.5383527584890164 -8553.8000000014945 -1.4997206012743296e-15 ;
+	setAttr ".t" -type "double3" -9.168823576429336 11.965942197494854 33.9328465613725 ;
+	setAttr ".r" -type "double3" -15.938352758089344 -8655.000000000502 4.115940627773352e-16 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "A9C7C298-43B2-1E98-7DFC-89A393283466";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 20.525936535226869;
+	setAttr ".coi" 36.310220767143363;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -79,7 +79,7 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".ai_translator" -type "string" "orthographic";
 createNode transform -n "ToolBox1";
 	rename -uid "93E7C5B6-4274-53ED-75C3-9F801BD398D9";
-	setAttr ".v" no;
+	setAttr ".t" -type "double3" -10 0 10 ;
 	setAttr ".sp" -type "double3" 0 -4.4408920985006262e-16 0 ;
 createNode mesh -n "ToolBoxShape1" -p "ToolBox1";
 	rename -uid "4EF199BF-4A78-D44D-8612-0B86E863EF16";
@@ -1352,7 +1352,6 @@ createNode mesh -n "ToolBoxShape1" -p "ToolBox1";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "ToolBox2";
 	rename -uid "CD4E5C56-48E1-0AFA-43F1-168F3D969530";
-	setAttr ".v" no;
 createNode transform -n "Lock" -p "|ToolBox2";
 	rename -uid "5B83789D-4480-82B5-C850-69B6304377EC";
 	setAttr ".t" -type "double3" 0 0 -0.034237387377793027 ;
@@ -4673,7 +4672,7 @@ createNode mesh -n "polySurfaceShape2" -p "|ToolBox2|ToolBox2";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "ToolBox3";
 	rename -uid "279C4DAD-40D0-68C7-B52C-1ABCB17D73C1";
-	setAttr ".v" no;
+	setAttr ".t" -type "double3" 8 0 10 ;
 createNode transform -n "ToolBox3" -p "|ToolBox3";
 	rename -uid "1F366497-42BE-D7DB-ED3C-DE806BB02803";
 createNode mesh -n "ToolBoxShape3" -p "|ToolBox3|ToolBox3";
@@ -5743,6 +5742,7 @@ createNode mesh -n "polySurfaceShape8" -p "|ToolBox3|Handle";
 	setAttr ".ai_translator" -type "string" "polymesh";
 createNode transform -n "ToolBox4";
 	rename -uid "CEDFB18A-4564-900B-6500-85A176F9346A";
+	setAttr ".t" -type "double3" 0 0 10 ;
 createNode mesh -n "ToolBoxShape4" -p "ToolBox4";
 	rename -uid "A1F093EF-4F0A-5188-E216-91BA41252BC6";
 	setAttr -k off ".v";
