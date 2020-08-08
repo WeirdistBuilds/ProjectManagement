@@ -1,0 +1,99 @@
+TEXBoxes
+	Box1
+	Box2
+	Box3
+	Box4
+
+TEXHandTools
+	Bolt
+	ButaneTorch
+	Chisel
+	Drill
+	FastenerHolder
+	File
+	GlueCan
+	GlueTube
+	HammerClaw
+	HammerMetal
+	HammerRubber
+	Nail
+	OilCan
+	Pick
+	Pliers
+	Ruler
+	Screwdriver	
+	SprayCan1
+	SprayCan2
+	SprayCanLid
+	WrenchCrescent
+	WrenchPipe
+
+TEXLargeTools
+	Generator
+	Grinder
+	Lathe
+	Welder
+
+TEXMiscObjects
+	BoomBox
+	Fridge
+	GasTank
+	Laptop
+	TV
+	WallClock
+	
+TEXPipes
+	Pipe
+	PipeConnector
+	PipeCurve
+	
+TEXPowerObjects
+	PowerBox1
+	PowerBox2
+	PowerBox3
+	PowerSwitch
+	PowerPlug
+	
+TEXToolBoxes
+	ToolBox1
+	ToolBox2
+	ToolBox3
+	ToolBox4
+	
+TEXVents
+	VentConnector
+	VentExit
+	VentT
+	VentTube
+	
+TEXWorkshopFurnish
+	Corkboard
+	Shelf
+	Stool
+	FileCabinetSingle
+	FileCabinetTriple
+	
+PaperObjects (Not Texture Connected)
+	Blueprint
+	Book
+	Poster
+	StickyNote
+	
+RoomPieces (Not Texture Connected)
+	Floor
+	Walls
+	
+BackTable
+Cabinet
+CoffeeTable
+Couch
+Ladder
+LaserRifle
+LightHalogen
+MatRubber
+PipBoy
+RobotArm
+RugCrumpled
+TableCovered2
+Workbench
+
